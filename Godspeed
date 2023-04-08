@@ -1,0 +1,771 @@
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("GodSpeed || Booga Booga 2019 Gui, Made by Valkriyo", "Synapse")
+local Tab = Window:NewTab("Combat")
+local CombatSection = Tab:NewSection("Combat")
+CombatSection:NewButton("Q's Kill aura, (Q is to toggle on and off)", "An script that lets you hit multiple times without having to click, also gives reach", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/reapermadethis/valk/main/aura"))()
+
+end)
+CombatSection:NewButton("Hitbox Extender", "Let's you hit players from far away.", function()
+    _G.HeadSize = 20
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+CombatSection:NewButton("Walkspeed", "Let's you walk faster", function()
+    _G.HackedWalkSpeed = 18.635 local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
+    _G.HackedWalkSpeed = 18.635
+
+    local Plrs = game:GetService("Players")
+
+    local MyPlr = Plrs.LocalPlayer
+    local MyChar = MyPlr.Character
+
+    if MyChar then
+        local Hum = MyChar.Humanoid
+        Hum.Changed:connect(function()
+            Hum.WalkSpeed = _G.HackedWalkSpeed
+        end)
+        Hum.WalkSpeed = _G.HackedWalkSpeed
+    end
+end)
+
+CombatSection:NewButton("Autoeat", "Let's you eat without clicking your food.", function()
+    local a=Instance.new("ScreenGui")local b=Instance.new("Frame")local c=Instance.new("Frame")local d=Instance.new("Frame")local e=Instance.new("TextButton")local f=Instance.new("TextButton")local g=Instance.new("TextButton")local h=Instance.new("TextButton")local i=Instance.new("TextButton")local j=Instance.new("TextBox")local k=Instance.new("Frame")local l=Instance.new("TextButton")local m=Instance.new("TextBox")local n=Instance.new("Frame")local o=Instance.new("TextButton")a.Name="Booga Classic"a.Parent=game.CoreGui;a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Name="Main"b.Parent=a;b.Active=true;b.BackgroundColor3=Color3.fromRGB(213,213,213)b.BorderSizePixel=0;b.Position=UDim2.new(0.37956056,0,0.356918395,0)b.Size=UDim2.new(0.240234643,0,0.180751503,0)b.Draggable=true;c.Name="Head"c.Parent=b;c.Active=true;c.BackgroundColor3=Color3.fromRGB(70,70,70)c.BorderSizePixel=0;c.Position=UDim2.new(7.72596778e-08,0,0,0)c.Size=UDim2.new(0.108860746,0,1,0)d.Name="HeadShadow"d.Parent=c;d.BackgroundColor3=Color3.fromRGB(53,53,53)d.BorderSizePixel=0;d.Size=UDim2.new(0.302325577,0,1,0)e.Name="jumphack"e.Parent=b;e.BackgroundColor3=Color3.fromRGB(70,70,70)e.BorderSizePixel=0;e.Position=UDim2.new(0.146835491,0,0.747747719,0)e.Size=UDim2.new(0.387341708,0,0.193693697,0)e.Font=Enum.Font.SourceSansBold;e.Text="HIGH JUMP"e.TextColor3=Color3.fromRGB(255,255,255)e.TextSize=14.000;f.Name="Rejoingame"f.Parent=b;f.BackgroundColor3=Color3.fromRGB(70,70,70)f.BorderSizePixel=0;f.Position=UDim2.new(0.584810138,0,0.747747719,0)f.Size=UDim2.new(0.387341708,0,0.193693697,0)f.Font=Enum.Font.SourceSansBold;f.Text="SPEED HACK"f.TextColor3=Color3.fromRGB(255,255,255)f.TextSize=14.000;g.Name="SpawnChest"g.Parent=b;g.BackgroundColor3=Color3.fromRGB(70,70,70)g.BorderSizePixel=0;g.Position=UDim2.new(0.146835491,0,0.522522509,0)g.Size=UDim2.new(0.387341708,0,0.193693697,0)g.Font=Enum.Font.SourceSansBold;g.Text="SPAWN CHEST"g.TextColor3=Color3.fromRGB(255,255,255)g.TextSize=14.000;h.Name="FastSwing"h.Parent=b;h.BackgroundColor3=Color3.fromRGB(70,70,70)h.BorderSizePixel=0;h.Position=UDim2.new(0.584810138,0,0.522522509,0)h.Size=UDim2.new(0.387341708,0,0.193693697,0)h.Font=Enum.Font.SourceSansBold;h.Text="FAST SWING"h.TextColor3=Color3.fromRGB(255,255,255)h.TextSize=14.000;i.Name="TPPLAYER"i.Parent=b;i.BackgroundColor3=Color3.fromRGB(70,70,70)i.BorderSizePixel=0;i.Position=UDim2.new(0.146835491,0,0.301801801,0)i.Size=UDim2.new(0.182278454,0,0.193693697,0)i.Font=Enum.Font.SourceSansBold;i.Text="SPAM"i.TextColor3=Color3.fromRGB(255,255,255)i.TextSize=14.000;j.Name="TargetPlayer"j.Parent=b;j.BackgroundColor3=Color3.fromRGB(70,70,70)j.BorderSizePixel=0;j.Position=UDim2.new(0.146835491,0,0.0765765756,0)j.Size=UDim2.new(0.387341708,0,0.193693697,0)j.Font=Enum.Font.SourceSansBold;j.PlaceholderColor3=Color3.fromRGB(255,255,255)j.PlaceholderText="Target Player"j.Text=""j.TextColor3=Color3.fromRGB(0,0,0)j.TextSize=14.000;j.TextWrapped=true;k.Name="PlayerShadow"k.Parent=j;k.BackgroundColor3=Color3.fromRGB(54,54,54)k.BorderSizePixel=0;k.Position=UDim2.new(0,0,0.860465109,0)k.Size=UDim2.new(1,0,0.139534891,0)l.Name="RedBox"l.Parent=b;l.BackgroundColor3=Color3.fromRGB(70,70,70)l.BorderSizePixel=0;l.Position=UDim2.new(0.35189876,0,0.301801801,0)l.Size=UDim2.new(0.182278454,0,0.193693697,0)l.Font=Enum.Font.SourceSansBold;l.Text="AIM BODY"l.TextColor3=Color3.fromRGB(255,255,255)l.TextSize=14.000;m.Name="FoodName"m.Parent=b;m.BackgroundColor3=Color3.fromRGB(70,70,70)m.BorderSizePixel=0;m.Position=UDim2.new(0.584810138,0,0.0765765756,0)m.Size=UDim2.new(0.387341708,0,0.193693697,0)m.Font=Enum.Font.SourceSansBold;m.PlaceholderColor3=Color3.fromRGB(255,255,255)m.PlaceholderText="Food Name"m.Text=""m.TextColor3=Color3.fromRGB(0,0,0)m.TextSize=14.000;m.TextWrapped=true;n.Name="FoodShadow"n.Parent=m;n.BackgroundColor3=Color3.fromRGB(54,54,54)n.BorderSizePixel=0;n.Position=UDim2.new(0,0,0.860465109,0)n.Size=UDim2.new(1,0,0.139534891,0)o.Name="AutoEat"o.Parent=b;o.BackgroundColor3=Color3.fromRGB(70,70,70)o.BorderSizePixel=0;o.Position=UDim2.new(0.584810138,0,0.301801801,0)o.Size=UDim2.new(0.387341708,0,0.193693697,0)o.Font=Enum.Font.SourceSansBold;o.Text="AUTO EAT"o.TextColor3=Color3.fromRGB(255,255,255)o.TextSize=14.000;o.MouseButton1Click:connect(function()game.StarterGui:SetCore("SendNotification",{Title="Auto Eat",Text="Press f for autoeat",Icon="rbxassetid://0",Duration=5})local p=game:GetService("Players").LocalPlayer:GetMouse()p.KeyDown:connect(function(q)if q=="f"then local r=m.Text;local s=game:GetService("ReplicatedStorage").Events.UseBagItem;s:FireServer(r)end end)end)l.MouseButton1Click:connect(function()local t="Really red"while wait()do for u,v in pairs(game.Players:GetPlayers())do if v.Name==j.Text then v.Character.HumanoidRootPart.Transparency=0.35;v.Character.HumanoidRootPart.BrickColor=BrickColor.new(t)v.Character.HumanoidRootPart.Size=Vector3.new(14,14,14)end end end end)i.MouseButton1Click:connect(function()local w=game:GetService('ReplicatedStorage').Events;local x=game:GetService('Players').LocalPlayer;local y=x.Character;while wait()do for u,v in pairs(game.Players:GetPlayers())do if v.Name==j.Text then game:GetService("ReplicatedStorage").Events.EquipTool:FireServer(1)game:GetService("ReplicatedStorage").Events.EquipTool:FireServer(2)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame;w.SwingTool:FireServer(tick(),{v.Character.HumanoidRootPart})end end end end)e.MouseButton1Click:connect(function()local z=game:GetService("Players").LocalPlayer;local A=z.Character;local B=A:FindFirstChild("Humanoid")B.JumpPower=72 end)g.MouseButton1Click:connect(function()game.StarterGui:SetCore("SendNotification",{Title="Spawn Chest",Text="Press h for spam chest",Icon="rbxassetid://0",Duration=5})local C=game:GetService("Players").LocalPlayer;local p=C:GetMouse()p.KeyDown:connect(function(q)if q=="h"then local s=game:GetService("ReplicatedStorage").Events.PlaceStructure;local D=game.Players.LocalPlayer.Character.UpperTorso;local E=D.Position+D.CFrame.lookVector*10;local F=E.x;local G=E.y-2;local H=E.z;for I=1,1 do local r="Chest"local J=CFrame.new(F,G,H,1,0,0,0,1,-5.56028681e-08,0,-5.56028681e-08,1)local K=0;s:FireServer(r,J,K)end end end)end)h.MouseButton1Click:connect(function()local L=tick()getrenv().tick=function()L=L+100;return L end end)f.MouseButton1Click:connect(function()game.StarterGui:SetCore("SendNotification",{Title="Speed Hack",Text="Press Q for SpeedHack",Icon="rbxassetid://0",Duration=5})local C=game:GetService("Players").LocalPlayer;local M=C.Character;local p=game:GetService("Players").LocalPlayer:GetMouse()local N=M:FindFirstChild("HumanoidRootPart")local O=3;p.KeyDown:connect(function(q)if q=="q"then loop=true;while loop do N.CFrame=N.CFrame+N.CFrame.lookVector*O;wait()end end end)p.KeyUp:connect(function(q)if q=="q"then loop=false end end)end)game.StarterGui:SetCore("SendNotification",{Title="INFO",Text="for fast swing equip tool first",Icon="rbxassetid://0",Duration=5})game.StarterGui:SetCore("SendNotification",{Title="Credit",Text="by Walterino#6030",Icon="rbxassetid://0",Duration=5})game.StarterGui:SetCore("SendNotification",{Title="Show/Hide GUI",Text="Press t for show/hide",Icon="rbxassetid://0",Duration=5})local P=game.Players.LocalPlayer;P:GetMouse().KeyDown:connect(function(Q)if Q=="t"then if b.Visible==true then b.Visible=false elseif b.Visible==false then b.Visible=true end end end)
+
+end)
+
+
+
+
+
+local Tab = Window:NewTab("Teleports")
+local TeleportsSection = Tab:NewSection("Teleports")
+
+TeleportsSection:NewButton("Void Rock TP", "Void", function()
+     local torso = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+for i,v in pairs(game:GetService'Workspace'.TeleportParts.Part:GetDescendants()) do
+    if v.Name == "TouchInterest" and v.Parent then
+        firetouchinterest(torso, v.Parent, 0)
+        wait(0.1)
+        firetouchinterest(torso, v.Parent, 1)
+        break;
+    end
+end
+end)
+
+
+TeleportsSection:NewButton("Volcano", "Overworld", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1115.04919, -200.768265, -737.773132, 0.984812498, 0, 0.173621148, 0, 1, 0, -0.173621148, 0, 0.9848124)
+end)
+
+TeleportsSection:NewButton("Old God Hole", "Overworld", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1113.96143, -140.997803, 1151.86572, -0.996191859, 0, 0.0871884301, 0, 1, 0, -0.0871884301, 0, -0.9961918)
+end)
+
+local Tab = Window:NewTab("Crafting")
+local CraftingSection = Tab:NewSection("Crafting")
+CraftingSection:NewButton("God Armor Craft", "A script that lets you craft armor", function()
+    -- Script generated by Valkriyo ;)
+
+local args = {
+    [1] = "God Halo"
+}
+
+game:GetService("ReplicatedStorage").Events.CraftItem:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "God Chestplate"
+}
+
+game:GetService("ReplicatedStorage").Events.CraftItem:FireServer(unpack(args))
+
+local args = {
+    [1] = "God Legs"
+}
+
+game:GetService("ReplicatedStorage").Events.CraftItem:FireServer(unpack(args))
+
+local args = {
+    [1] = "God Rock"
+}
+
+game:GetService("ReplicatedStorage").Events.CraftItem:FireServer(unpack(args))
+
+end)
+
+
+CraftingSection:NewButton("God Armor Equip", "A script that lets you Equip armor", function()
+    -- Valkriyo generated this you fucktards
+
+local args = {
+    [1] = "God Chestplate"
+}
+
+game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+
+
+
+local args = {
+    [1] = "God Halo"
+}
+
+game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+
+
+
+
+local args = {
+    [1] = "God Legs"
+}
+
+game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+
+
+end)
+
+
+
+CraftingSection:NewButton("God Armor Unequip", "A script that lets you unequip armor", function()
+    -- Valkriyo generated this too FUCKTARD
+
+local args = {
+    [1] = "God Halo"
+}
+
+game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "God Chestplate"
+}
+
+game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "God Legs"
+}
+
+game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+end)
+
+local Tab = Window:NewTab("Crash")
+local CrashSection = Tab:NewSection("Crash Script")
+CrashSection:NewButton("Crash the game, Click on info for details", "Full set of crystal armor needed", function()
+for i = 0, 10500 do
+    wait (0.03)
+    local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "God Bag"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+        
+            local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "God Bag"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+        
+            local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "God Bag"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+        
+            local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "God Bag"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+        
+            local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+
+local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "God Bag"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer(unpack(args))
+    
+        
+            local args = {
+        [1] = "Crystal Crown"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Greaves"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+    
+    
+    local args = {
+        [1] = "Crystal Chestplate"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.UnequipArmor:FireServer(unpack(args))
+wait (0.03)
+
+
+end  
+end)
+
+local Tab = Window:NewTab("Hair")
+local HairSection = Tab:NewSection("Hair")
+HairSection:NewButton("Bald", "Makes you bald", function()
+    local args = {
+        [1] = "hair",
+        [2] = "none"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.CosmeticChange:FireServer(unpack(args))
+end)
+
+
+HairSection:NewButton("Blonde Girl", "Changes your hair to blonde hair girl", function()
+    local args = {
+        [1] = "hair",
+        [2] = "Blonde Girl"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.CosmeticChange:FireServer(unpack(args))
+    
+end)
+
+HairSection:NewButton("Blonde Boy", "Changes your hair to a Blonde Boy", function()
+    local args = {
+        [1] = "hair",
+        [2] = "Blonde Boy"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.CosmeticChange:FireServer(unpack(args))
+end)
+
+
+HairSection:NewButton("Crazy hair", "May not work", function()
+    local args = {
+        [1] = "hair",
+        [2] = "Crazyhair"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.CosmeticChange:FireServer(unpack(args))
+end)
+
+
+HairSection:NewButton("Brown Girl", "Makes your hair into a Brown Girl", function()
+    local args = {
+        [1] = "hair",
+        [2] = "Brown Girl"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.CosmeticChange:FireServer(unpack(args))
+end)
+
+HairSection:NewButton("Brown Boy", "Makes your hair into a Brown Boy", function()
+    local args = {
+        [1] = "hair",
+        [2] = "Brown Boy"
+    }
+    
+    game:GetService("ReplicatedStorage").Events.CosmeticChange:FireServer(unpack(args))
+end)
+
+
+local Tab = Window:NewTab("Extra")
+local ExtraSection = Tab:NewSection("Extra")
+ExtraSection:NewButton("Infinite Yield", "No Info :(", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+
+end)
+
+ExtraSection:NewButton("CMD-X", "No Info :(", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+
+end)
+
+ExtraSection:NewButton("FOV camera", "makes you play with more stretched resolution", function()
+    workspace.CurrentCamera.FieldOfView = 100
+
+end)
+
+
+TeleportsSection:NewButton(" Teleport to Void", "makes you teleport to the booga booga void", function()
+   local TeleportService = game:GetService ("TeleportService")
+local gameID = 8131331959
+local player = game.Players.LocalPlayer
+    TeleportService:Teleport (gameID, player)
+end)
+
+TeleportsSection:NewButton(" Teleport to Overworld", "makes you teleport to the booga booga overworld", function()
+   local TeleportService = game:GetService ("TeleportService")
+local gameID = 8131316275
+local player = game.Players.LocalPlayer
+    TeleportService:Teleport (gameID, player)
+end)
+
+ExtraSection:NewButton("Booga Booga bitches", "Another GUI", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ValkieTalkie/boogabitches/main/README.md"))()
+end)
+
+CombatSection:NewButton("Alt + Click Destory", "Includes noclip(Click destory)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ValkieTalkie/altdestory/main/README.md"))()
+end)
+
+CombatSection:NewButton("Click TP (Left ctrl + Left click", "Let's you teleport while clicking", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ValkieTalkie/Clickdestory/main/README.md"))()
+end)
+
+
+ExtraSection:NewButton("Candora + Aura", "I prefer Q's aura much more", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\56\55\48\53\48\55\52\55\48\57\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\10")()
+    -- Gui to Lua
+    -- Version: 3.2
+
+    -- Instances:
+
+    local hitbox = Instance.new("ScreenGui")
+    local TextLabel = Instance.new("TextLabel")
+    local TextButton = Instance.new("TextButton")
+    local TextButton_2 = Instance.new("TextButton")
+    local autoattackclosest = Instance.new("TextLabel")
+    local TextButton_3 = Instance.new("TextButton")
+
+    --Properties:
+
+    hitbox.Name = "hitbox"
+    hitbox.Parent = game.CoreGui
+    hitbox.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    TextLabel.Parent = hitbox
+    TextLabel.Active = true
+    TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel.BorderColor3 = Color3.fromRGB(206, 206, 206)
+    TextLabel.Position = UDim2.new(0.174743548, 0, 0.381276608, 0)
+    TextLabel.Size = UDim2.new(0, 120, 0, 24)
+    TextLabel.Font = Enum.Font.SourceSans
+    TextLabel.Text = "Hitbox viewer"
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextSize = 14.000
+    TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+    TextLabel.Draggable = true
+
+    TextButton.Parent = TextLabel
+    TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    TextButton.BorderSizePixel = 0
+    TextButton.Position = UDim2.new(0.792034924, 0, 0, 0)
+    TextButton.Size = UDim2.new(0, 24, 0, 24)
+    TextButton.Font = Enum.Font.SourceSans
+    TextButton.Text = "off"
+    TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton.TextSize = 14.000
+
+    TextButton_2.Parent = TextLabel
+    TextButton_2.BackgroundColor3 = Color3.fromRGB(141, 141, 141)
+    TextButton_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton_2.Position = UDim2.new(-0.000256347645, 0, -0.426157624, 0)
+    TextButton_2.Size = UDim2.new(0, 120, 0, 10)
+    TextButton_2.Font = Enum.Font.SourceSans
+    TextButton_2.Text = "Destroy"
+    TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton_2.TextSize = 14.000
+
+    autoattackclosest.Name = "auto attack closest"
+    autoattackclosest.Parent = TextLabel
+    autoattackclosest.Active = true
+    autoattackclosest.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    autoattackclosest.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    autoattackclosest.Position = UDim2.new(0, 0, 1, 0)
+    autoattackclosest.Size = UDim2.new(0, 120, 0, 24)
+    autoattackclosest.Font = Enum.Font.SourceSans
+    autoattackclosest.Text = "Kill Aura"
+    autoattackclosest.TextColor3 = Color3.fromRGB(255, 255, 255)
+    autoattackclosest.TextSize = 14.000
+    autoattackclosest.TextXAlignment = Enum.TextXAlignment.Left
+    autoattackclosest.Draggable = true
+
+    TextButton_3.Parent = autoattackclosest
+    TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    TextButton_3.Position = UDim2.new(0.792034924, 0, 0, 0)
+    TextButton_3.Size = UDim2.new(0, 24, 0, 24)
+    TextButton_3.Font = Enum.Font.SourceSans
+    TextButton_3.Text = "off"
+    TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton_3.TextSize = 14.000
+
+    -- Scripts:
+
+    local function MWRRKD_fake_script() -- TextButton.LocalScript 
+        local script = Instance.new('LocalScript', TextButton)
+
+        getgenv().Toggled = false
+        function spawnPart()
+            local char = game.Players.LocalPlayer.Character
+
+            char:WaitForChild("HumanoidRootPart")
+
+            local partWeld = Instance.new("Weld")
+
+            local reachPart = Instance.new("Part")
+            reachPart.Transparency = 0
+            reachPart.Anchored = false
+            reachPart.CanCollide = false
+            reachPart.Massless = true
+            reachPart.Material = Enum.Material.ForceField
+            reachPart.CFrame = char.PrimaryPart.CFrame * CFrame.new(0, 0, -reachPart.Size.Z / 2 + 1)
+            reachPart.Color = Color3.fromRGB(139, 254, 255)
+            reachPart.Parent = char
+            reachPart.Size = Vector3.new(7, 13, 8)
+            reachPart.Name = "RevampedReachPart"
+
+            reachPart.Touched:Connect(function(part)
+                if part.Parent ~= tostring(game.Players.LocalPlayer) and part.Name == "HumanoidRootPart" then
+                    print(part,"STARTED")
+                    reachPart.BrickColor = BrickColor.new("Really red")
+                end
+            end)
+
+            reachPart.TouchEnded:Connect(function(part)
+                if part.Parent ~= tostring(game.Players.LocalPlayer) and part.Name == "HumanoidRootPart" then
+                    print(part,"ENDED")
+                    reachPart.BrickColor = BrickColor.new("Pastel blue-green")
+                end
+            end)
+
+            partWeld.Parent = reachPart
+            partWeld.Part0 = reachPart
+            partWeld.Part1 = char.PrimaryPart
+            partWeld.C0 = CFrame.new(0, 0, reachPart.Size.Z / 2 - 1)
+        end
+
+        script.Parent.MouseButton1Click:Connect(function()
+            if Toggled == false then
+                Toggled = true
+                spawnPart()
+                script.Parent.BackgroundColor3 = Color3.new(0,255,0)
+                script.Parent.Text = "on"
+            else
+                Toggled = false
+                game.Players.LocalPlayer.Character.RevampedReachPart:Destroy()
+                script.Parent.BackgroundColor3 = Color3.new(255,0,0)
+                script.Parent.Text = "off"
+            end
+        end)
+
+        game.Players.LocalPlayer.CharacterAdded:Connect(function(me)
+            print(me)
+            if me == game.Players.LocalPlayer.Character and Toggled == true then
+                me:WaitForChild("HumanoidRootPart")
+                spawnPart()
+            end
+        end)
+    end
+    coroutine.wrap(MWRRKD_fake_script)()
+    local function ZVDY_fake_script() -- TextButton_2.LocalScript 
+        local script = Instance.new('LocalScript', TextButton_2)
+
+        script.Parent.MouseButton1Click:Connect(function()
+            print(script.Parent.Parent.Parent)
+            script.Parent.Parent.Parent:Destroy()
+        end)
+    end
+    coroutine.wrap(ZVDY_fake_script)()
+    local function LFRU_fake_script() -- TextButton_3.LocalScript 
+        local script = Instance.new('LocalScript', TextButton_3)
+
+        local AttackToggle = false
+        script.Parent.MouseButton1Click:Connect(function()
+            AttackToggle = not AttackToggle
+            print(AttackToggle)
+            if AttackToggle == true then
+                script.Parent.BackgroundColor3 = Color3.new(0,255,0) script.Parent.Text = "on"
+            else
+                script.Parent.BackgroundColor3 = Color3.new(255,0,0) script.Parent.Text = "off"
+            end
+            while AttackToggle == true and wait() do
+                local Players = game:GetService("Players")
+                local LocalPlayer = Players.LocalPlayer
+
+                local function GetClosest()
+                    local Character = LocalPlayer.Character
+                    local HumanoidRootPart = Character and Character:FindFirstChild("HumanoidRootPart")
+                    if not (Character or HumanoidRootPart) then return end
+
+                    local TargetDistance = math.huge
+                    local Target
+
+                    for i,v in ipairs(Players:GetPlayers()) do
+                        if v ~= LocalPlayer and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+                            local TargetHRP = v.Character.HumanoidRootPart
+                            local mag = (HumanoidRootPart.Position - TargetHRP.Position).magnitude
+                            if mag < TargetDistance then
+                                TargetDistance = mag
+                                Target = v
+                            end
+                        end
+                    end
+
+                    return tostring(Target)
+                end
+                -- Script generated by SimpleSpy - credits to exx#9394
+                local autoatacktarget = GetClosest()
+                local args = {
+                    [1] = {
+                        [1] = game:GetService("Players")[autoatacktarget].Character.LeftLowerLeg,
+                        [2] = game:GetService("Players")[autoatacktarget].Character.LeftUpperArm,
+                        [3] = game:GetService("Players")[autoatacktarget].Character.HumanoidRootPart.Part,
+                        [4] = game:GetService("Players")[autoatacktarget].Character.HumanoidRootPart,
+                        [5] = game:GetService("Players")[autoatacktarget].Character.LeftFoot,
+                        [6] = game:GetService("Players")[autoatacktarget].Character.RightUpperArm,
+                        [7] = game:GetService("Players")[autoatacktarget].Character.LowerTorso,
+                        [8] = game:GetService("Players")[autoatacktarget].Character.Head,
+                        [9] = game:GetService("Players")[autoatacktarget].Character.LeftLowerArm,
+                        [10] = game:GetService("Players")[autoatacktarget].Character.LeftHand,
+                        [11] = game:GetService("Players")[autoatacktarget].Character.RightUpperLeg,
+                        [12] = game:GetService("Players")[autoatacktarget].Character.UpperTorso,
+                        [13] = game:GetService("Players")[autoatacktarget].Character.LeftUpperLeg,
+                        [14] = game:GetService("Players")[autoatacktarget].Character.RightFoot,
+                        [15] = game:GetService("Players")[autoatacktarget].Character.RightLowerArm,
+                        [16] = game:GetService("Players")[autoatacktarget].Character.RightLowerLeg,
+                        [17] = game:GetService("Players")[autoatacktarget].Character.RightHand}}
+
+                game:GetService("ReplicatedStorage").Events.SwingTool:FireServer(unpack(args))
+            end
+        end)
+    end
+    coroutine.wrap(LFRU_fake_script)()
+end)
+
+TeleportsSection:NewButton("Teleport to Middle (Use in Overworld)", "In Overworld", function()
+    local playerHead = game.Players.LocalPlayer.Character.HumanoidRootPart playerHead.CFrame = CFrame.new(-1052.59, -113.5, -669.416)
+    wait(1.3)
+    playerHead.CFrame = CFrame.new(-774.310059, 304.539398, -1210.83911, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait()
+    playerHead.CFrame = CFrame.new()
+    playerHead.CFrame = CFrame.new()
+    playerHead.CFrame = CFrame.new()
+end)
